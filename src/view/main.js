@@ -1,6 +1,6 @@
 $(".search-button").on("click", () => {
   $.ajax({
-    url: "https://www.omdbapi.com/?apikey=75923130&s=" + $(".input-keyword").val(),
+    url: "http://www.omdbapi.com/?apikey=75923130&s=" + $(".input-keyword").val(),
     success: (results) => {
       const movies = results.Search;
       let cards = "";
@@ -12,7 +12,7 @@ $(".search-button").on("click", () => {
       //  Ketika tombol detail di klik
       $(".modal-detail-button").on("click", () => {
         $.ajax({
-          url: "https://www.omdbapi.com/?apikey=75923130&i=" + $(this).data("imdbid"),
+          url: "http://www.omdbapi.com/?apikey=75923130&i=" + $(this).data("imdbid"),
           success: (m) => {
             const movieDetail = showModals(m);
 
