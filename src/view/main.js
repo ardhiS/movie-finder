@@ -12,7 +12,7 @@ $(".search-button").on("click", () => {
       //  Ketika tombol detail di klik
       $(".modal-detail-button").on("click", () => {
         $.ajax({
-          url: "http://www.omdbapi.com/?apikey=75923130&i=" + $(this).data("imdbid"),
+          url: "https://www.omdbapi.com/?apikey=75923130&i=" + $(this).data("imdbid"),
           success: (m) => {
             const movieDetail = showModals(m);
 
